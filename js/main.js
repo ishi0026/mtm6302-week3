@@ -33,6 +33,7 @@ for(let eachNode of allNodes){
 //variable 変数 is the box we can put numbers or strings 下の2つとは全然違うもの
 
 //property　hrefやaなどルールで決まっている名前のもののみ、なのでたまにattributeと同じものがpropertyと呼ばれる
+// .documentの後において使う
 //attribute everything  in < > in HTML, hrefやaなどルールで決まっている名前のもの + 自分で決めた名前のクラスなど
 
 // traversing the DOM
@@ -70,3 +71,8 @@ fakeConsole.setAttribute("style",`
 background-color: powderblue;
 padding: 10px;
 border: 1px solid black;`)
+
+fakeConsole.innerHTML += "<p>This is Fake console, where we can output out information</p>"
+
+fakeConsole.innerHTML += "The above URL is" + learnMore.getAttribute("href")
+fakeConsole.innerHTML += "<br>" + document.URL
